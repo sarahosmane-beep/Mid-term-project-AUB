@@ -19,7 +19,7 @@
 - Test command used by CI: `python -m pytest -q`.
 - Dependency setup: explicit Python 3.12 with `python -m pip install -r requirements.txt`.
 - Shortcut check: no `continue-on-error`, no `|| true`, and pytest is not skipped.
-- Verified run: recorded after the corrected branch is pushed to the original repository.
+- Verified green run: https://github.com/sarahosmane-beep/Mid-term-project-AUB/actions/runs/33002670773 (all steps passed in 11 seconds on 2026-08-26).
 
 ## Docker evidence
 
@@ -41,7 +41,7 @@
 | Due dates, overdue filtering, and search remain functional | Existing tests plus API and frontend checks | Pass | No feature removal; copied the established frontend into the required `frontend/` directory |
 | `GET /health` returns HTTP 200 and `status: ok` | Local TestClient and running Docker container | Pass | None |
 | Docker runs as a non-root user without copying `.env` | Successful build/run, `whoami`, Dockerfile, `.dockerignore` | Pass | Added explicit `USER appuser` and narrow `COPY` commands |
-| CI installs dependencies and runs pytest without shortcuts | Workflow inspection | Configuration pass; hosted result recorded after push | Added explicit Python, installation, and pytest steps |
+| CI installs dependencies and runs pytest without shortcuts | Workflow inspection and hosted run | Pass: 12 tests in GitHub Actions | Added explicit Python, installation, and pytest steps |
 
 ## Submission
 
